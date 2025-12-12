@@ -1,5 +1,5 @@
 * {
-    margin: 0;
+  margin: 0;
     padding: 0
 }
 
@@ -8,7 +8,9 @@
 }
 
 body {
-    line-height: 1.5;
+  line-height: 1.5;
+  color: white;
+  /* placeholder color for text visibility in initial page setup */
 }
 
 img, picture, video, canvas, svg {
@@ -33,33 +35,51 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .content-holder {
-    display: grid;
-    grid-template-columns: 1fr 4fr;
+  display: grid;
+  grid-template-columns: 1fr 4fr;
 
-    height: 100vh;
-    width: 100vw;
+  height: 100vh;
+  width: 100vw;
 }
 
 .nav {
-    background-color: palevioletred;
-    /* placeholder color for site part distinction */
+  background-color: palevioletred;
+  /* placeholder color for site part distinction */
+  display: grid;
+  grid-template-rows: 3rem 9rem 4.5rem; 
+  gap: 5rem;
+  place-items: start;
+}
+
+.nav > div {
+  background-color: black;
+  /* placeholder color for site part distinction */
+  height: fit-content;
 }
 
 .main-content {
-    display: grid;
-    grid-template-rows: 1fr 4fr;
+  display: grid;
+  grid-template-rows: 1fr 4fr;
 }
 
 .header-menu {
-    background-color: yellow;
-    /* placeholder color for site part distinction */ 
+  background-color: yellow;
+  /* placeholder color for site part distinction */ 
 }
 
 .main-page {
-    display: grid;
-    grid-template-columns: 4fr 1fr;
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+}
+
+.content {
+  background-color: purple;
+  /* placeholder color for site part distinction */
+  
 }
 
 .information {
-    background-color: aqua;
+  background-color: aqua;
+  /* placeholder color for site part distinction */
+  
 }
