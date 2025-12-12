@@ -46,15 +46,22 @@ h1, h2, h3, h4, h5, h6 {
   background-color: palevioletred;
   /* placeholder color for site part distinction */
   display: grid;
-  grid-template-rows: 3rem 9rem 4.5rem; 
-  gap: 5rem;
-  place-items: start;
+}
+
+.nav > div, .header-menu > div {
+  background-color: black;
+  /* placeholder color for site part distinction */
 }
 
 .nav > div {
-  background-color: black;
-  /* placeholder color for site part distinction */
   height: fit-content;
+  display: grid;
+  gap: 5rem;
+}
+
+.nav > div > div{
+  background-color: red;
+  /* placeholder rule for site part distinction, can be removed later */
 }
 
 .main-content {
@@ -65,6 +72,9 @@ h1, h2, h3, h4, h5, h6 {
 .header-menu {
   background-color: yellow;
   /* placeholder color for site part distinction */ 
+  display: grid;
+  grid-template-rows: 1fr 2fr;
+  gap: 5rem;
 }
 
 .main-page {
