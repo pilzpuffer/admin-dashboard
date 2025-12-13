@@ -1,12 +1,17 @@
 @font-face {
-  font-family: "Urabnist";
-  src: url("") format("woff2");
+  font-family: "Urbanist";
+  src: 
+      url("./font-assets/Urbanist/Urbanist-Regular.woff2") format("woff2"),
+      url("./font-assets/Urbanist/Urbanist-Regular.woff") format("woff");
+
   font-style: normal;
 }
 
 @font-face {
-  font-family: "Urabnist";
-  src: url("") format("woff2");
+  font-family: "Urbanist";
+  src: 
+      url("./font-assets/Urbanist/Urbanist-Italic.woff2") format("woff2"),
+      url("./font-assets/Urbanist/Urbanist-Italic.woff") format("woff");
   font-style: italic; 
 }
 
@@ -22,6 +27,7 @@
 body {
   line-height: 1.5;
   color: white;
+  font-family: "Urbanist";
   /* placeholder color for text visibility in initial page setup */
 }
 
