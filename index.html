@@ -74,13 +74,27 @@
         </div>
         <div class="main-content">
             <div class="header-menu">
-                <div>Search</div>
+                <div>
+                    <div>
+                        <form method="POST">
+                        <input type="search" id="search" name="search" />
+                        <button type="submit"><span>Search</span></button>
+                        </form>
+                    </div>
+
+                    <div class="profile-corner">
+                        <!-- make something similiar to what we have for nav items! -->
+                        <img src="./image-assets/icons/bell.svg">
+                        <img id="small-profile-picture" src="./image-assets/profile-picture.webp">
+                        <div>Eepy Kitty</div>
+                    </div>
+                </div>
                 <div>Hi there</div>
-                <img src="./image-assets/profile-picture.webp">
+                <img id="profile-picture" src="./image-assets/profile-picture.webp">
             </div>
             <div class="main-page">
                 <div class="content">
-                    <div>Your Lessons</div>
+                    <div>Your Courses</div>
                     <div>
                         <div class="lesson-card">Course Introduction</div>
                         <div class="lesson-card">College Algebra - MATH 1201</div>

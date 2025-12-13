@@ -69,7 +69,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .nav-main > div, .header-menu > div {
-  background-color: black;
+  background-color: pink;
   /* placeholder color for site part distinction */
 }
 
@@ -96,7 +96,7 @@ h1, h2, h3, h4, h5, h6 {
   justify-items: start;
   align-items: center;
 
-    font-size: 1.8rem;
+  font-size: 1.8rem;
 }
 
 .nav-item + .nav-item {
@@ -127,9 +127,50 @@ h1, h2, h3, h4, h5, h6 {
   gap: 5rem;
 }
 
+.header-menu > div {
+  display: grid;
+  grid-template-columns: 5fr 2fr;
+}
+
+.profile-corner {
+  display: grid;
+  grid-template-columns: 0.5fr 0.5fr 2fr;
+  gap: 1rem;
+  justify-content: end;
+  align-items: center;
+}
+
 .header-menu img {
-  height: 8rem;
+  height: 2rem;
+}
+
+#small-profile-picture {
+  height: 3rem;
   border-radius: 50%;
+}
+
+#profile-picture{
+  height: 6rem;
+  border-radius: 50%;
+}
+
+.header-menu button {
+  background-image: url(./image-assets/icons/magnify.svg);
+  background-repeat: no-repeat;
+  background-color: rgba(0, 0, 0, 0);
+  background-position: 50% 50%;
+  height: 2rem;
+  width: 2rem;
+  border: none;
+}
+
+.header-menu button:hover {
+  background-color: pink;
+  /* placeholder color, replace with one that will fit site design */
+}
+
+.header-menu button span {
+  display: none;
 }
 
 .main-page {
