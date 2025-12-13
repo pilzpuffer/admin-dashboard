@@ -42,26 +42,51 @@ h1, h2, h3, h4, h5, h6 {
   width: 100vw;
 }
 
-.nav {
+.nav-main {
   background-color: palevioletred;
   /* placeholder color for site part distinction */
   display: grid;
+  font-size: 2rem;
 }
 
-.nav > div, .header-menu > div {
+.nav-main > div, .header-menu > div {
   background-color: black;
   /* placeholder color for site part distinction */
 }
 
-.nav > div {
+.nav-main > div {
   height: fit-content;
   display: grid;
   gap: 5rem;
 }
 
-.nav > div > div{
+.nav-main > div > div{
   background-color: red;
   /* placeholder rule for site part distinction, can be removed later */
+}
+
+.nav-item {
+  display: grid;
+  grid-template-columns: 3rem 1fr;
+  gap: 1.5rem;
+  padding-left: 1rem;
+
+  justify-items: start;
+  align-items: center;
+}
+
+.nav-item + .nav-item {
+  padding-top: 1rem;
+}
+
+.nav-item img[src*="message.svg"] {
+  transform: scaleX(-1);
+}
+
+.dashboard > .nav-item{
+  font-size: 2.6rem;
+  grid-template-columns: 5rem 1fr;
+  gap: 1.2rem;
 }
 
 .main-content {
