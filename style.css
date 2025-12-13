@@ -1,3 +1,15 @@
+@font-face {
+  font-family: "Urabnist";
+  src: url("") format("woff2");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Urabnist";
+  src: url("") format("woff2");
+  font-style: italic; 
+}
+
 * {
   margin: 0;
     padding: 0
@@ -102,6 +114,11 @@ h1, h2, h3, h4, h5, h6 {
   gap: 5rem;
 }
 
+.header-menu img {
+  height: 8rem;
+  border-radius: 50%;
+}
+
 .main-page {
   display: grid;
   grid-template-columns: 4fr 1fr;
@@ -118,3 +135,5 @@ h1, h2, h3, h4, h5, h6 {
   /* placeholder color for site part distinction */
   
 }
+
+
