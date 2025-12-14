@@ -251,6 +251,19 @@ input[type="search"]::-webkit-search-results-decoration {
   padding-left: 3rem;
 }
 
+.lesson-card {
+  display: grid;
+  grid-template-rows: 10rem 1fr 1fr;
+}
+
+.lesson-card.math div:nth-child(1) {
+  background-image: url("./image-assets/math.webp");
+}
+
+.lesson-card.programming div:nth-child(1) {
+  background-image: url("./image-assets/programming.webp");
+}
+
 .information {
   background-color: aqua;
   /* placeholder color for site part distinction */
