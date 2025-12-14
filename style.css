@@ -230,8 +230,14 @@ input[type="search"]::-webkit-search-results-decoration {
 
 .lesson-notice {
   display: grid;
-  grid-template-columns: 0.6fr 5rem;
-  gap: 1.5rem;
+  grid-template-columns: 4rem 20rem 5rem;
+  gap: 1em;
+
+  align-items: center;
+}
+
+.time {
+  justify-self: end;
 }
 
 .main-page {
