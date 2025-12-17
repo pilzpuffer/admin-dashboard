@@ -253,34 +253,55 @@ input[type="search"]::-webkit-search-results-decoration {
 
 .courses {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
   gap: 1.5rem;
 }
 
 .lesson-card {
   display: grid;
   grid-template-rows: 10rem 1fr 1fr;
+
+  width: 18rem;
 }
 
-.lesson-card.general div:nth-child(1) {
+.lesson-card.general div.card-background {
   background-image: url("./image-assets/general.webp");
 }
 
-.lesson-card.math div:nth-child(1) {
+.lesson-card.math div.card-background {
   background-image: url("./image-assets/math.webp");
 }
 
-.lesson-card.programming div:nth-child(1) {
+.lesson-card.programming div.card-background {
   background-image: url("./image-assets/programming.webp");
 }
 
-.lesson-card.general div:nth-child(1),
-.lesson-card.math div:nth-child(1),
-.lesson-card.programming div:nth-child(1) {
+.lesson-card.general div.card-background,
+.lesson-card.math div.card-background,
+.lesson-card.programming div.card-background {
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-size: cover;
   width: 18rem;
+}
+
+.lesson-card div.card-title {
+  font-size: 1.4rem;
+}
+
+.lesson-card progress {
+  align-self: self-end;
+  width: 100%;
+}
+
+.card-status {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 30%;
+}
+
+.card-status div:nth-child(2) {
+  justify-self: end;
 }
 
 .information {
