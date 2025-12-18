@@ -326,10 +326,31 @@ input[type="search"]::-webkit-search-results-decoration {
  margin-bottom: 2rem;
 }
 
-a.maintenance::after {
-  content: url("./image-assets/icons/wrench-clock.svg");
-  margin-left: 5px;
-  height: 0.5rem;
-  display: inline;
+
+
+a.maintenance::before, a.event::before, a#halloween::after {
+  content: "";
+  background-size: 100% 100%;
+  display: inline-block;
+
+  height: 25px;
+  width: 25px;
+
+  position: relative;
+  top: 5px;
 }
 
+a.maintenance::before {
+  margin-right: 5px;
+  background-image:url("./image-assets/icons/wrench-clock.svg");
+}
+
+a.event::before {
+  margin-right: 5px;
+  background-image:url("./image-assets/icons/party-popper.svg");
+}
+
+a#halloween::after {
+  margin-left: 5px;
+  background-image:url("./image-assets/icons/halloween.svg");
+}
