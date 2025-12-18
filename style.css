@@ -328,7 +328,7 @@ input[type="search"]::-webkit-search-results-decoration {
 
 
 
-a.maintenance::before, a.event::before, a#halloween::after {
+a::before {
   content: "";
   background-size: 100% 100%;
   display: inline-block;
@@ -340,17 +340,50 @@ a.maintenance::before, a.event::before, a#halloween::after {
   top: 5px;
 }
 
-a.maintenance::before {
+a.event ~ a::after{
+  content: "";
+  background-size: 100% 100%;
+  display: inline-block;
+
+  height: 25px;
+  width: 25px;
+
+  position: relative;
+  top: 5px;
+}
+
+a::after {
+  margin-left: 5px;
+}
+
+a::before {
   margin-right: 5px;
+}
+
+a.maintenance::before {
   background-image:url("./image-assets/icons/wrench-clock.svg");
 }
 
 a.event::before {
-  margin-right: 5px;
   background-image:url("./image-assets/icons/party-popper.svg");
 }
 
 a#halloween::after {
-  margin-left: 5px;
   background-image:url("./image-assets/icons/halloween.svg");
+}
+
+a.ttrpg::before, a.theater::after  {
+  background-image:url("./image-assets/icons/dice-6.svg");
+}
+
+a.robotics::before, a.theater::after  {
+  background-image:url("./image-assets/icons/robot-excited.svg");
+}
+
+a.theater::before, a.theater::after {
+  background-image:url("./image-assets/icons/drama-masks.svg");
+}
+
+a.event ~ a::before {
+  content: none;
 }
