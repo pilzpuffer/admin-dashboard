@@ -259,7 +259,7 @@ input[type="search"]::-webkit-search-results-decoration {
 
 .lesson-card {
   display: grid;
-  grid-template-rows: 10rem 1fr 0.5fr 0.5fr;
+  grid-template-rows: 3rem 1fr 0.5fr 0.5fr;
 
   width: 18rem;
 }
@@ -282,11 +282,14 @@ input[type="search"]::-webkit-search-results-decoration {
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-size: cover;
-  width: 18rem;
+  height: 4rem;
+  filter: blur(1px) saturate(70%);
 }
 
 .lesson-card div.card-title {
+  margin-top: 1rem;
   font-size: 1.4rem;
+
 }
 
 .lesson-card progress {
@@ -313,7 +316,7 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 
 .lesson-card, .progress, .deadlines, .announcements, .noticeboard {
-  border-radius: 25px / 25px;
+  border-radius: 10px / 10px;
   background-color: aliceblue;
   overflow: hidden;
 
@@ -325,8 +328,6 @@ input[type="search"]::-webkit-search-results-decoration {
 .info-title + div {
  margin-bottom: 2rem;
 }
-
-
 
 a::before {
   content: "";
