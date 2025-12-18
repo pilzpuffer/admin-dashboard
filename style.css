@@ -254,7 +254,7 @@ input[type="search"]::-webkit-search-results-decoration {
 .courses {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-  gap: 1.5rem;
+  gap: 2.5rem;
 }
 
 .lesson-card {
@@ -316,10 +316,20 @@ input[type="search"]::-webkit-search-results-decoration {
   border-radius: 25px / 25px;
   background-color: aliceblue;
   overflow: hidden;
+
+    /* placeholder rule for site part distinction */
+  color:black
+  /* placeholder rule for site part distinction */
 }
 
 .info-title + div {
  margin-bottom: 2rem;
 }
 
+a.maintenance::after {
+  content: url("./image-assets/icons/wrench-clock.svg");
+  margin-left: 5px;
+  height: 0.5rem;
+  display: inline;
+}
 
