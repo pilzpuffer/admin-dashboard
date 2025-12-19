@@ -19,6 +19,14 @@
   --img-size: 2rem;
   --small-pfp: 3rem;
   --big-pfp: 6rem;
+
+  --header-menu-upper: 4rem;
+  --header-menu-lower: 8rem;
+  --header-menu-gap: 3rem;
+
+  --accent-color: rgb(255, 192, 203);
+  --bright-accent-color: rgb(165, 56, 96);
+  --background-color: rgb(255, 255, 232);
 }
 
 * {
@@ -37,8 +45,6 @@ html, body {
 
 body {
   line-height: 1.5;
-  color: white;
-  /* placeholder color for text visibility in initial page setup */
   font-family: "Urbanist";
 }
 
@@ -72,28 +78,17 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .nav-main {
-  background-color: palevioletred;
-  /* placeholder color for site part distinction */
+  background-color: var(--accent-color);
   display: grid;
-}
-
-.nav-main > div, .header-menu > div {
-  background-color: pink;
-  /* placeholder color for site part distinction */
 }
 
 .nav-main > div {
   height: fit-content;
   display: grid;
-  gap: 5rem;
+  gap: 4rem;
 
   position: sticky;
   top: 0px
-}
-
-.nav-main > div > div{
-  background-color: red;
-  /* placeholder rule for site part distinction, can be removed later */
 }
 
 .nav-item {
@@ -125,21 +120,21 @@ h1, h2, h3, h4, h5, h6 {
 
 .main-content {
   display: grid;
-  grid-template-rows: 1fr 4fr;
+  grid-template-rows: calc(var(--header-menu-upper) + var(--header-menu-gap) + var(--header-menu-lower)) 1fr;
 }
 
 .header-menu {
-  background-color: yellow;
-  /* placeholder color for site part distinction */ 
   display: grid;
-  grid-template-rows: 1fr 2fr;
-  gap: 3rem;
+  grid-template-rows: var(--header-menu-upper) var(--header-menu-lower);
+  gap: var(--header-menu-gap);
   padding: 0 3rem;
+  height: calc(var(--header-menu-upper) + var(--header-menu-gap) + var(--header-menu-lower));
 }
 
 .upper-header {
   display: grid;
   grid-template-columns: 7fr 2.5fr;
+  height: var(--header-menu-upper);
 }
 
 input[type='search'] {
@@ -164,11 +159,12 @@ input[type='search'] {
   position: absolute;
   margin-left: -47px;
   z-index: 2;
+
+  background-color: var(--accent-color);
 }
 
 .search-corner button:hover {
-  background-color: pink;
-  /* placeholder color, replace with one that will fit site design */
+  background-color: var(--bright-accent-color);
 }
 
 input[type="search"]::-webkit-search-cancel-button,
@@ -212,12 +208,17 @@ input[type="search"]::-webkit-search-results-decoration {
   border-radius: 50%;
 }
 
+.lower-header button {
+  background-color: var(--bright-accent-color);
+}
+
 .header-menu button span {
   display: none;
 }
 
 .lower-header {
   display: grid;
+  height: var(--header-menu-lower);
   grid-template-columns: repeat(2, 1fr);
 }
 
@@ -226,6 +227,12 @@ input[type="search"]::-webkit-search-results-decoration {
   grid-template-columns: var(--big-pfp) 1fr;
   align-items: center;
   gap: 1.5rem;
+}
+
+.schedule-reminder {
+  display: grid;
+  align-content: center;
+  justify-content: center;
 }
 
 .lesson-notice {
@@ -246,8 +253,7 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 
 .content {
-  background-color: purple;
-  /* placeholder color for site part distinction */
+  background-color: var(--background-color);
   padding: 0 3rem;
 }
 
@@ -297,6 +303,28 @@ input[type="search"]::-webkit-search-results-decoration {
   width: 100%;
 
   border-radius: 0px;
+}
+
+.lesson-card progress {
+accent-color: red;
+background-color: tomato;
+
+-webkit-appearence: none;
+}
+
+/* set the background color for progress */
+.lesson-card progress::-webkit-progress-bar {
+  background-color: tomato;
+}
+
+/* set the progress value color */
+.lesson-card progress::-webkit-progress-value {
+  background-color: red;
+}
+
+/* set the progress value color for Firefox */
+.lesson-card progress::-moz-progress-bar {
+  background-color: red;
 }
 
 .card-status {
