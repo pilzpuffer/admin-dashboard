@@ -22,7 +22,8 @@
 
   --header-menu-upper: 4rem;
   --header-menu-lower: 8rem;
-  --header-menu-gap: 3rem;
+  --header-menu-gap: 1.5rem;
+  --full-header-height: calc(var(--header-menu-upper) + var(--header-menu-gap) + var(--header-menu-lower));
 
   --accent-color: rgb(255, 192, 203);
   --bright-accent-color: rgb(165, 56, 96);
@@ -120,15 +121,15 @@ h1, h2, h3, h4, h5, h6 {
 
 .main-content {
   display: grid;
-  grid-template-rows: calc(var(--header-menu-upper) + var(--header-menu-gap) + var(--header-menu-lower)) 1fr;
+  grid-template-rows: calc(var(--full-header-height) + 1rem) 1fr;
 }
 
 .header-menu {
   display: grid;
   grid-template-rows: var(--header-menu-upper) var(--header-menu-lower);
   gap: var(--header-menu-gap);
-  padding: 0 3rem;
-  height: calc(var(--header-menu-upper) + var(--header-menu-gap) + var(--header-menu-lower));
+  padding: 0rem 3rem 1rem 3rem;
+  height: var(--full-header-height) + 1rem
 }
 
 .upper-header {
@@ -209,6 +210,12 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 
 .lower-header button {
+  background-color: var(--accent-color);
+  border: none;
+  border-radius: 15px
+}
+
+.lower-header  button:hover {
   background-color: var(--bright-accent-color);
 }
 
@@ -233,6 +240,8 @@ input[type="search"]::-webkit-search-results-decoration {
   display: grid;
   align-content: center;
   justify-content: center;
+
+  gap: 1rem;
 }
 
 .lesson-notice {
