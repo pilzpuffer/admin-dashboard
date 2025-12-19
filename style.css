@@ -22,7 +22,7 @@
 
   --header-menu-upper: 4rem;
   --header-menu-lower: 8rem;
-  --header-menu-gap: 1.5rem;
+  --header-menu-gap: 1rem;
   --full-header-height: calc(var(--header-menu-upper) + var(--header-menu-gap) + var(--header-menu-lower));
 
   --accent-color: rgb(255, 192, 203);
@@ -129,7 +129,7 @@ h1, h2, h3, h4, h5, h6 {
   grid-template-rows: var(--header-menu-upper) var(--header-menu-lower);
   gap: var(--header-menu-gap);
   padding: 0rem 3rem 1rem 3rem;
-  height: var(--full-header-height) + 1rem
+  height: var(--full-header-height) + 1rem;
 }
 
 .upper-header {
@@ -150,18 +150,18 @@ input[type='search'] {
 .search-corner button {
   background-image: url(./image-assets/icons/magnify.svg);
   background-repeat: no-repeat;
-  background-color: rgba(0, 0, 0, 0);
   background-position: 50% 50%;
-  height: 2.5rem;
+  height: 2.38rem;
   width: 3rem;
   border: none;
   border-radius: 0 15px 15px 0 / 0 25px 25px 0;
 
   position: absolute;
-  margin-left: -47px;
+  margin-left: -49px;
   z-index: 2;
 
   background-color: var(--accent-color);
+  align-self: center;
 }
 
 .search-corner button:hover {
@@ -212,7 +212,9 @@ input[type="search"]::-webkit-search-results-decoration {
 .lower-header button {
   background-color: var(--accent-color);
   border: none;
-  border-radius: 15px
+  border-radius: 15px;
+
+  padding: 0.25rem;
 }
 
 .lower-header  button:hover {
@@ -242,6 +244,7 @@ input[type="search"]::-webkit-search-results-decoration {
   justify-content: center;
 
   gap: 1rem;
+  overflow: visible;
 }
 
 .lesson-notice {
@@ -274,7 +277,7 @@ input[type="search"]::-webkit-search-results-decoration {
 
 .lesson-card {
   display: grid;
-  grid-template-rows: 3rem 1fr 0.5fr 0.5fr;
+  grid-template-rows: 4rem 1fr 0.5fr 0.5fr;
 
   width: 18rem;
 }
@@ -297,7 +300,6 @@ input[type="search"]::-webkit-search-results-decoration {
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-size: cover;
-  height: 4rem;
   filter: blur(1px) saturate(70%);
 }
 
