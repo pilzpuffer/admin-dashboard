@@ -278,8 +278,6 @@ input[type="search"]::-webkit-search-results-decoration {
 .lesson-card {
   display: grid;
   grid-template-rows: 4rem 1fr 0.5fr 0.5fr;
-
-  width: 18rem;
 }
 
 .lesson-card.general div.card-background {
@@ -349,8 +347,7 @@ background-color: tomato;
 }
 
 .information {
-  background-color: aqua;
-  /* placeholder color for site part distinction */
+  background-color: var(--background-color);
   padding-right: 3rem;
 }
 
