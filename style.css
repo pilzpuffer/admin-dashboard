@@ -29,7 +29,10 @@
 
   --accent-color: rgb(255, 192, 203);
   --bright-accent-color: rgb(165, 56, 96);
-  --background-color: rgb(255, 255, 232);
+  --background-color: rgb(255, 255, 238);
+  --card-background: rgb(245, 247, 250);
+  --progress-bar-normal: rgb(188, 110, 132);
+  --progress-bar-background: rgb(220, 216, 207);
 }
 
 * {
@@ -147,19 +150,25 @@ input[type='search'] {
   position: relative;
   border: none;
   border-radius: 15px / 25px;
+
+  background-color: rgba(164, 181, 187, 0.4);
+}
+
+input[type='search']:focus {
+  outline: none;
 }
 
 .search-corner button {
   background-image: url(./image-assets/icons/magnify.svg);
   background-repeat: no-repeat;
   background-position: 50% 50%;
-  height: 2.38rem;
+  height: 2.5rem;
   width: 3rem;
   border: none;
   border-radius: 0 15px 15px 0 / 0 25px 25px 0;
 
   position: absolute;
-  margin-left: -49px;
+  margin-left: -48px;
   z-index: 2;
 
   background-color: var(--accent-color);
@@ -326,25 +335,24 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 
 .lesson-card progress {
-accent-color: red;
-background-color: tomato;
-
+accent-color: var(--progress-bar-normal);
+background-color: var(--progress-bar-background);
 -webkit-appearence: none;
 }
 
 /* set the background color for progress */
 .lesson-card progress::-webkit-progress-bar {
-  background-color: tomato;
+  background-color: var(--progress-bar-background);
 }
 
 /* set the progress value color */
 .lesson-card progress::-webkit-progress-value {
-  background-color: red;
+  background-color: var(--progress-bar-normal);
 }
 
 /* set the progress value color for Firefox */
 .lesson-card progress::-moz-progress-bar {
-  background-color: red;
+  background-color: var(--progress-bar-normal);
 }
 
 .card-status {
@@ -364,7 +372,7 @@ background-color: tomato;
 
 .lesson-card, .progress, .deadlines, .announcements, .noticeboard {
   border-radius: 10px / 10px;
-  background-color: aliceblue;
+  background-color: var(--card-background);
   overflow: hidden;
 
     /* placeholder rule for site part distinction */
