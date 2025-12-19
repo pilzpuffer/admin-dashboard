@@ -21,18 +21,28 @@
   --big-pfp: 6rem;
 
   --title-font-size: 1.8rem;
+  --sub-title-font-size: 1.4rem;
 
   --header-menu-upper: 4rem;
   --header-menu-lower: 8rem;
   --header-menu-gap: 1rem;
   --full-header-height: calc(var(--header-menu-upper) + var(--header-menu-gap) + var(--header-menu-lower));
 
+  --gray-100: rgb(235, 232, 224);
+  --gray-300: rgb(200, 196, 187);
+  --gray-700: rgb(90, 86, 78);
+
   --accent-color: rgb(255, 192, 203);
   --bright-accent-color: rgb(165, 56, 96);
   --background-color: rgb(255, 255, 238);
   --card-background: rgb(245, 247, 250);
-  --progress-bar-normal: rgb(188, 110, 132);
+
   --progress-bar-background: rgb(220, 216, 207);
+  --progress-bar-normal: rgb(188, 110, 132);
+  --grade-status-good: rgb(94, 142, 120);
+  --grade-status-warning: rgb(201, 138, 61);
+  --grade-status-bad: rgb(170, 64, 64);
+
 }
 
 * {
@@ -73,6 +83,10 @@ p {
 
 h1, h2, h3, h4, h5, h6 {
   text-wrap: balance;
+}
+
+a:hover {
+  text-decoration: none;
 }
 
 .content-holder {
@@ -151,7 +165,7 @@ input[type='search'] {
   border: none;
   border-radius: 15px / 25px;
 
-  background-color: rgba(164, 181, 187, 0.4);
+  background-color: var(--gray-100);
 }
 
 input[type='search']:focus {
@@ -203,7 +217,7 @@ input[type="search"]::-webkit-search-results-decoration {
   justify-content: end;
   align-items: center;
 
-  font-size: 1.4rem;
+  font-size: var(--sub-title-font-size);
 }
 
 .header-menu img {
@@ -281,7 +295,7 @@ input[type="search"]::-webkit-search-results-decoration {
 
 .main-page {
   display: grid;
-  grid-template-columns: 4fr 1fr;
+  grid-template-columns: 7fr 2fr;
 }
 
 .content {
@@ -323,7 +337,7 @@ input[type="search"]::-webkit-search-results-decoration {
 
 .lesson-card div.card-title {
   margin-top: 1rem;
-  font-size: 1.4rem;
+  font-size: var(--sub-title-font-size);
 
 }
 
@@ -380,8 +394,21 @@ background-color: var(--progress-bar-background);
   /* placeholder rule for site part distinction */
 }
 
+.section-title, .information {
+  padding-top: 1.5rem;
+}
+
+.section-title, .info-title {
+  padding-bottom: 0.5rem;
+}
+
+.section-title, .info-title {
+  font-weight: bold;
+  font-size: var(--sub-title-font-size);
+}
+
 .info-title + div {
- margin-bottom: 2rem;
+  margin-bottom: 2rem;
 }
 
 a::before {
