@@ -460,6 +460,10 @@ meter {
   background: var(--grade-status-bad);
 }
 
+.announcement-card div + div {
+  padding-top: 0.5rem;
+}
+
 div.progress-card + div.progress-card,
 div.deadline-card + div.deadline-card,
 div.announcement-card + div.announcement-card,
