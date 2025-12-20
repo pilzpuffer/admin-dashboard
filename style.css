@@ -149,6 +149,8 @@ a:hover {
   gap: var(--header-menu-gap);
   padding: 0rem 3rem 1rem 3rem;
   height: var(--full-header-height) + 1rem;
+
+  background-color: var(--card-background);
 }
 
 .upper-header {
@@ -335,10 +337,17 @@ input[type="search"]::-webkit-search-results-decoration {
   filter: blur(1px) saturate(70%);
 }
 
+.lesson-card .card-title, .lesson-card .card-status {
+  padding: 0rem 0.5rem 0.5rem 0.5rem;
+}
+
 .lesson-card div.card-title {
   margin-top: 1rem;
   font-size: var(--sub-title-font-size);
+}
 
+.lesson-card .card-status {
+  margin-top: 0.5rem;
 }
 
 .lesson-card progress {
@@ -409,6 +418,10 @@ background-color: var(--progress-bar-background);
 
 .info-title + div {
   margin-bottom: 2rem;
+}
+
+.progress, .deadlines, .announcements, .noticeboard {
+  padding: 2.5rem 1.5rem;
 }
 
 a::before {
