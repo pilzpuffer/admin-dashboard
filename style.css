@@ -507,6 +507,10 @@ a::before {
   margin-right: 5px;
 }
 
+a.task-deadline::before {
+  background-image: url("./image-assets/icons/file-alert.svg");
+}
+
 a.maintenance::before {
   background-image:url("./image-assets/icons/wrench-clock.svg");
 }
