@@ -369,7 +369,6 @@ input[type="search"]::-webkit-search-results-decoration {
 .lesson-card progress {
 accent-color: var(--progress-bar-normal);
 background-color: var(--progress-bar-background);
--webkit-appearence: none;
 }
 
 /* set the background color for progress */
@@ -436,6 +435,12 @@ background-color: var(--progress-bar-background);
 .info-card-title {
   font-weight: bold;
   color: var(--dark-text)
+}
+
+meter {
+  height: 1rem;
+  width: 100%;
+  border-radius: 0px;
 }
 
 .progress meter::-webkit-meter-bar {
